@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+</html>
+<script>
+    const word0 = "Wassup";
+    const word0translation = "Здарова";
+
+    const word1 = "Bye";
+    const word1translation = "Покеда";
+
+    const word2 = "Programmer";
+    const word2translation = "Програмист";
+
+    const wordsCount = 3;
+
+    const finishSuccessMessage ="The Best of the Best !!!"
+    const finishUnsuccessMessage ="Good but try to do better !!!"
+
+    const correctAnswersMinPercent = 50;
+
+    let correctAnswersCount = 0;
+ 
+    //---------------------------------
+
+    const userAnswer0 = prompt(word0);
+    alert(userAnswer0 === word0translation);
+    if (userAnswer0 === word0translation) {
+        correctAnswersCount =  correctAnswersCount + 1;
+    }
+
+    const userAnswer1 = prompt(word1);
+    alert(userAnswer1 === word1translation);
+    if (userAnswer1 === word1translation) {
+        correctAnswersCount =  correctAnswersCount + 1;
+    }
+
+    const userAnswer2 = prompt(word2);
+    alert(userAnswer2 === word2translation);
+    if (userAnswer2 === word2translation) {
+        correctAnswersCount =  correctAnswersCount + 1;
+    }
+
+    const userCorrectAnswersMinPercent = correctAnswersCount / wordsCount * 100;
+    if (correctAnswersCount / wordsCount * 100 > correctAnswersMinPercent) {
+        alert(finishSuccessMessage); 
+    } else {
+        alert(finishUnsuccessMessage);
+    }
+</script>
